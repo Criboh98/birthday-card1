@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Captain Eli - The Lily Adventure</title>
+
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Pirata+One&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================
+QUEST PANEL
+===================== -->
+
+<div id="questPanel">
+
+<h2>📜 The Lily Quest</h2>
+
+<h3>
+Journey to Eternal Happiness
+</h3>
+
+
+<ul>
+
+<li id="questCrew">
+☐ Meet the crew
+</li>
+
+<li id="questIsland1">
+☐ Explore Sköndal Island
+</li>
+
+<li id="questMap1">
+☐ Find Map Piece #1
+</li>
+
+<li id="questIsland2">
+☐ Explore Porto Badisco
+</li>
+
+<li id="questMap2">
+☐ Find Map Piece #2
+</li>
+
+<li id="questIsland3">
+☐ Reach Hökarängen
+</li>
+
+<li id="questTreasure">
+☐ Discover Eternal Happiness
+</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+<!-- =====================
+INVENTORY
+===================== -->
+
+<button id="inventoryButton">
+🎒 Inventory
+</button>
+
+
+<div id="inventoryPanel">
+
+<h2>
+🎒 Captain Eli's Inventory
+</h2>
+
+<ul id="inventoryList">
+
+<li>
+No items yet
+</li>
+
+</ul>
+
+</div>
+
+
+
+
+
+
+<!-- =====================
+MESSAGE BOX
+===================== -->
+
+<div id="messageBox">
+
+<p id="messageText"></p>
+
+<button id="closeMessage">
+Close
+</button>
+
+</div>
+
+
+
+
+
+
+
+<!-- =====================
+LOADING SCREEN
+===================== -->
+
+<div id="loadingScreen">
+
+<div class="loading-content">
+
+
+<h1>
+THE LILY
+</h1>
+
+
+<p>
+An Original Pirate Adventure
+</p>
+
+
+<div class="loading-bar">
+
+<div id="loadingProgress"></div>
+
+</div>
+
+
+<span id="loadingText">
+Preparing the voyage...
+</span>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="game">
+
+
+
+
+
+
+
+<!-- =====================
+INTRO SCENE
+===================== -->
+
+
+<section id="introScene" class="scene active">
+
+
+<img class="sky"
+src="assets/backgrounds/sky.png">
+
+
+<img class="ocean"
+src="assets/backgrounds/ocean.png">
+
+
+<div class="stars"></div>
+
+<div class="fog"></div>
+
+
+
+<img id="lilyShip"
+src="assets/ship/lily.png">
+
+
+
+
+
+<div class="titleBox">
+
+
+<h1>
+THE LILY
+</h1>
+
+
+<h2>
+An Original Pirate Adventure
+</h2>
+
+
+<p>
+Created for Captain Eli
+</p>
+
+
+
+<button id="startButton">
+⚓ Begin Adventure
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================
+HARBOR SCENE
+===================== -->
+
+
+<section id="harborScene" class="scene">
+
+
+<img class="background"
+src="assets/backgrounds/harbor.png">
+
+
+
+<div class="harborMessage">
+
+
+<h1>
+The Harbor of The Lily
+</h1>
+
+
+<p>
+The first clue is hidden somewhere nearby...
+</p>
+
+
+
+<button id="meetCrewButton">
+Meet the Crew
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="harborObject crate" id="crate">
+
+📦
+
+<span>
+Old Crate
+</span>
+
+</div>
+
+
+
+<div class="harborObject wheel" id="wheel">
+
+⚓
+
+<span>
+Ship Wheel
+</span>
+
+</div>
+
+
+
+<div class="harborObject mapClue" id="mapClue">
+
+🗺️
+
+<span>
+Hidden Map Piece
+</span>
+
+</div>
+
+
+
+</section>
+<!-- =====================
+CREW SCENE
+===================== -->
+
+
+<section id="crewScene" class="scene">
+
+
+<img class="background"
+src="assets/backgrounds/harbor.png">
+
+
+
+<div class="crewTitle">
+
+<h1>
+⚓ The Crew of The Lily ⚓
+</h1>
+
+
+<p>
+Choose your companions for the voyage.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="crewPortraits">
+
+
+
+<div class="crewPortrait" id="nova">
+
+<div class="portraitFrame">
+
+<img src="assets/characters/captain-nova.png">
+
+</div>
+
+<h2>
+Captain Nova
+</h2>
+
+</div>
+
+
+
+
+
+<div class="crewPortrait" id="mira">
+
+<div class="portraitFrame">
+
+<img src="assets/characters/mira.png">
+
+</div>
+
+<h2>
+Mira
+</h2>
+
+</div>
+
+
+
+
+
+<div class="crewPortrait" id="kaito">
+
+<div class="portraitFrame">
+
+<img src="assets/characters/kaito.png">
+
+</div>
+
+<h2>
+Kaito
+</h2>
+
+</div>
+
+
+
+
+
+<div class="crewPortrait" id="luna">
+
+<div class="portraitFrame">
+
+<img src="assets/characters/luna.png">
+
+</div>
+
+<h2>
+Luna
+</h2>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="dialogueBox">
+
+
+<h2 id="characterName">
+
+Captain Nova
+
+</h2>
+
+
+<p id="dialogueText">
+
+Welcome aboard, Captain Eli.
+
+</p>
+
+
+
+
+<button id="questButton">
+
+🗺️ Continue Adventure
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+WORLD MAP
+===================== -->
+
+
+<section id="mapScene" class="scene">
+
+
+<img class="background"
+src="assets/backgrounds/map.png">
+
+
+
+
+
+<div class="mapTitle">
+
+<h1>
+The Lily World Map
+</h1>
+
+
+<p>
+Choose your next destination.
+</p>
+
+</div>
+
+
+
+
+
+<div class="islandButtons">
+
+
+<button id="skondalButton">
+
+🏝️ Sköndal
+
+</button>
+
+
+
+<button id="portoButton" disabled>
+
+🌊 Porto Badisco 🔒
+
+</button>
+
+
+
+
+<button id="hokarangenButton" disabled>
+
+✨ Hökarängen 🔒
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+SKÖNDAL ISLAND
+===================== -->
+
+
+<section id="skondalScene" class="scene">
+
+
+<img class="background"
+src="assets/backgrounds/harbor.png">
+
+
+
+<div class="islandStory">
+
+
+<h1>
+🏝️ Sköndal Island
+</h1>
+
+
+<p>
+The Island of First Winds
+</p>
+
+
+<p>
+Search the island and find the first piece of the legendary map.
+</p>
+
+
+
+<button id="findMapOne">
+
+🗺️ Search for Map Piece #1
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+PORTO BADISCO
+===================== -->
+
+
+<section id="portoScene" class="scene">
+
+
+<img class="background"
+src="assets/backgrounds/ocean.png">
+
+
+
+<div class="islandStory">
+
+
+<h1>
+🌊 Porto Badisco
+</h1>
+
+
+<p>
+The Island of Forgotten Memories
+</p>
+
+
+<p>
+Ancient secrets wait beneath the ruins.
+</p>
+
+
+
+<button id="findMapTwo">
+
+🗺️ Discover Map Piece #2
+
+</button>
+
+
+
+</div>
+
+
+</section>
+<!-- =====================
+HÖKARÄNGEN FINAL ISLAND
+===================== -->
+
+
+<section id="hokarangenScene" class="scene">
+
+
+<img class="background"
+src="assets/backgrounds/treasure-island.png">
+
+
+
+<div class="islandStory">
+
+
+<h1>
+✨ Hökarängen
+</h1>
+
+
+<p>
+The Eternal Isle
+</p>
+
+
+<p>
+The final secret of The Lily awaits.
+</p>
+
+
+
+<button id="openTreasure">
+
+💎 Open the Treasure
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================
+TREASURE ENDING
+===================== -->
+
+
+<section id="treasureScene" class="scene">
+
+
+<div class="endingBox">
+
+
+<h1>
+✨ THE TREASURE OF THE LILY ✨
+</h1>
+
+
+<p>
+
+You crossed oceans.<br>
+You discovered islands.<br>
+You followed the legend.
+
+</p>
+
+
+
+<h2>
+The greatest treasure was never gold...
+</h2>
+
+
+
+<h1>
+💎 Eternal Happiness 💎
+</h1>
+
+
+
+<button id="birthdayButton">
+
+🎂 Discover the Birthday Surprise
+
+</button>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================
+BIRTHDAY LETTER
+===================== -->
+
+
+<section id="letterScene" class="scene">
+
+
+<div class="endingBox">
+
+
+<h1>
+❤️ Captain Eli ❤️
+</h1>
+
+
+
+<p>
+
+The greatest adventure was not the treasure.<br><br>
+
+It was the memories created along the journey,<br>
+the friends who sailed beside you,<br>
+and the love that makes every adventure special.
+
+</p>
+
+
+
+<h1>
+❤️ Eternal Love ❤️
+</h1>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
