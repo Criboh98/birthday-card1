@@ -88,14 +88,19 @@ opacity:1;
 
 .background {
 
+position:absolute;
+
+inset:0;
+
 width:100%;
 
 height:100%;
 
 object-fit:cover;
 
-}
+z-index:1;
 
+}
 
 
 
@@ -1805,5 +1810,14 @@ z-index:50;
 .islandButtons button {
 
 cursor:pointer;
+
+}
+
+.mapTitle,
+.islandButtons {
+
+position:absolute;
+
+z-index:10;
 
 }
