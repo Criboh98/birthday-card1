@@ -1,0 +1,960 @@
+* {
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+body {
+
+overflow:hidden;
+
+background:black;
+
+color:white;
+
+font-family:"IM Fell English", serif;
+
+}
+
+
+
+#game {
+
+width:100vw;
+
+height:100vh;
+
+}
+
+
+
+.scene {
+
+position:absolute;
+
+inset:0;
+
+display:none;
+
+overflow:hidden;
+
+}
+
+
+
+.scene.active {
+
+display:block;
+
+}
+
+
+
+.background {
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+
+
+
+
+/* =====================
+QUEST PANEL
+===================== */
+
+
+#questPanel {
+
+position:absolute;
+
+top:25px;
+
+left:25px;
+
+width:280px;
+
+background:
+
+linear-gradient(#d8b46a,#8b5a20);
+
+
+border:5px solid #3b2108;
+
+border-radius:15px;
+
+padding:20px;
+
+color:#201000;
+
+z-index:100;
+
+
+box-shadow:0 10px 30px black;
+
+
+}
+
+
+
+#questPanel h2 {
+
+font-family:"Pirata One";
+
+font-size:35px;
+
+text-align:center;
+
+}
+
+
+#questPanel h3 {
+
+text-align:center;
+
+font-size:20px;
+
+}
+
+
+
+#questPanel ul {
+
+list-style:none;
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+
+
+
+
+
+
+/* =====================
+MESSAGE BOX
+===================== */
+
+
+#messageBox {
+
+
+position:absolute;
+
+display:none;
+
+
+bottom:15%;
+
+left:20%;
+
+right:20%;
+
+
+background:
+
+rgba(0,0,0,.9);
+
+
+border:
+
+4px solid #d9b45b;
+
+
+border-radius:20px;
+
+
+padding:30px;
+
+
+text-align:center;
+
+
+z-index:200;
+
+
+}
+
+
+
+#messageText {
+
+
+font-size:28px;
+
+
+}
+
+
+
+#closeMessage {
+
+
+font-size:22px;
+
+margin-top:15px;
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+INTRO
+===================== */
+
+
+.sky,
+.ocean {
+
+
+position:absolute;
+
+
+width:100%;
+
+
+height:100%;
+
+
+object-fit:cover;
+
+
+}
+
+
+
+.ocean {
+
+
+animation:oceanMove 8s infinite alternate;
+
+
+}
+
+
+
+@keyframes oceanMove {
+
+
+from {
+
+transform:translateX(0);
+
+}
+
+
+to {
+
+transform:translateX(-35px);
+
+}
+
+
+}
+
+
+
+
+
+.stars {
+
+
+position:absolute;
+
+inset:0;
+
+
+background-image:
+
+radial-gradient(white 2px,transparent 2px);
+
+
+background-size:90px 90px;
+
+
+opacity:.5;
+
+
+}
+
+
+
+
+
+.fog {
+
+
+position:absolute;
+
+inset:0;
+
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(255,255,255,.2),
+
+transparent
+
+);
+
+
+animation:fogMove 12s infinite;
+
+
+}
+
+
+
+@keyframes fogMove {
+
+
+from {
+
+transform:translateX(-100%);
+
+}
+
+
+to {
+
+transform:translateX(100%);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+SHIP
+===================== */
+
+
+#lilyShip {
+
+
+position:absolute;
+
+
+width:500px;
+
+
+max-width:70vw;
+
+
+bottom:15%;
+
+
+left:-600px;
+
+
+animation:
+
+shipEnter 5s forwards,
+
+shipFloat 4s infinite 5s;
+
+
+
+filter:
+
+drop-shadow(0 0 25px gold);
+
+
+}
+
+
+
+@keyframes shipEnter {
+
+
+from {
+
+left:-600px;
+
+}
+
+
+to {
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+
+}
+
+
+
+@keyframes shipFloat {
+
+
+50% {
+
+margin-bottom:20px;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+TEXT
+===================== */
+
+
+.titleBox,
+.harborMessage {
+
+
+position:absolute;
+
+
+top:15%;
+
+
+width:100%;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+h1 {
+
+
+font-family:"Pirata One";
+
+
+font-size:90px;
+
+
+text-shadow:
+
+0 5px 20px black;
+
+
+}
+
+
+
+
+
+button {
+
+
+margin-top:30px;
+
+
+padding:15px 45px;
+
+
+border-radius:50px;
+
+
+border:3px solid #d9b45b;
+
+
+background:
+
+linear-gradient(#85551f,#351c08);
+
+
+color:white;
+
+
+font-family:"Pirata One";
+
+
+font-size:28px;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+}
+
+
+
+button:hover {
+
+
+transform:scale(1.1);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+HARBOR OBJECTS
+===================== */
+
+
+.harborObject {
+
+
+position:absolute;
+
+
+font-size:70px;
+
+
+cursor:pointer;
+
+
+text-align:center;
+
+
+filter:
+
+drop-shadow(0 10px 10px black);
+
+
+animation:
+
+objectFloat 3s infinite;
+
+
+transition:.3s;
+
+
+z-index:20;
+
+
+}
+
+
+
+.harborObject span {
+
+
+display:block;
+
+
+font-family:"Pirata One";
+
+
+font-size:28px;
+
+
+color:#ffd76b;
+
+
+text-shadow:
+
+0 3px 8px black;
+
+
+}
+
+
+
+.harborObject:hover {
+
+
+transform:
+
+scale(1.25);
+
+
+filter:
+
+drop-shadow(0 0 25px gold);
+
+
+}
+
+
+
+
+@keyframes objectFloat {
+
+
+50% {
+
+
+transform:translateY(-10px);
+
+
+}
+
+
+}
+
+
+
+
+
+
+.crate {
+
+
+left:20%;
+
+bottom:20%;
+
+
+}
+
+
+
+.wheel {
+
+
+right:25%;
+
+bottom:25%;
+
+
+}
+
+
+
+.mapClue {
+
+
+left:50%;
+
+bottom:35%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =====================
+CREW
+===================== */
+
+
+.crewTitle {
+
+
+position:absolute;
+
+top:5%;
+
+width:100%;
+
+text-align:center;
+
+
+}
+
+
+
+.crewTitle h1 {
+
+font-size:75px;
+
+}
+
+
+
+
+
+.crewPortraits {
+
+
+position:absolute;
+
+bottom:25%;
+
+
+width:100%;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+gap:40px;
+
+
+}
+
+
+
+
+
+.crewPortrait {
+
+
+text-align:center;
+
+
+cursor:pointer;
+
+
+transition:.4s;
+
+
+}
+
+
+
+
+.portraitFrame {
+
+
+width:200px;
+
+height:230px;
+
+
+background:
+
+linear-gradient(#5b3515,#241205);
+
+
+border:
+
+8px solid #d9b45b;
+
+
+border-radius:15px;
+
+
+padding:10px;
+
+
+box-shadow:
+
+0 15px 30px black;
+
+
+}
+
+
+
+
+
+.portraitFrame img {
+
+
+width:100%;
+
+
+height:100%;
+
+
+object-fit:contain;
+
+
+}
+
+
+
+
+
+.crewPortrait h2 {
+
+
+font-family:"Pirata One";
+
+
+font-size:35px;
+
+
+}
+
+
+
+
+
+.crewPortrait:hover {
+
+
+transform:
+
+translateY(-20px)
+
+scale(1.08);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================
+DIALOGUE
+===================== */
+
+
+.dialogueBox {
+
+
+position:absolute;
+
+
+bottom:3%;
+
+
+left:10%;
+
+
+right:10%;
+
+
+background:
+
+rgba(0,0,0,.85);
+
+
+border:
+
+4px solid #d9b45b;
+
+
+border-radius:20px;
+
+
+padding:25px;
+
+
+text-align:center;
+
+
+}
+
+
+
+.dialogueBox h2 {
+
+
+font-family:"Pirata One";
+
+
+font-size:42px;
+
+
+color:#ffd76b;
+
+
+}
+
+
+
+.dialogueBox p {
+
+
+font-size:26px;
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:700px){
+
+
+h1 {
+
+font-size:55px;
+
+}
+
+
+#questPanel {
+
+width:190px;
+
+}
+
+
+.harborObject {
+
+font-size:45px;
+
+}
+
+
+.crewPortraits {
+
+gap:5px;
+
+}
+
+
+.portraitFrame {
+
+width:80px;
+
+height:120px;
+
+}
+
+
+}
