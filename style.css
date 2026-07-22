@@ -50,7 +50,7 @@ display:none;
 
 overflow:hidden;
 
-opacity:0;
+opacity:1;
 
 }
 
@@ -60,7 +60,7 @@ opacity:0;
 
 display:block;
 
-animation:sceneFade .8s forwards;
+opacity:1;
 
 }
 
