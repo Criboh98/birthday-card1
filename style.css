@@ -1820,3 +1820,17 @@ z-index:60;
 .harborMessage {
     z-index: 30;
 }
+
+
+/* FIX CREW SCENE LAYERING */
+
+.crewTitle,
+.crewPortraits,
+.dialogueBox {
+    position:absolute;
+    z-index:50;
+}
+
+.crewPortraits {
+    display:flex;
+}
