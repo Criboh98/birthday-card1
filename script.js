@@ -732,12 +732,14 @@ showMessage(
 // =========================
 
 
-const openTreasure =
-document.getElementById("openTreasure");
+const openTreasure = document.getElementById("openTreasure");
 
+console.log("Treasure button:", openTreasure);
 
 
 openTreasure.addEventListener("click",()=>{
+
+console.log("TREASURE CLICKED");
 
 
 completeQuest("questIsland3");
@@ -747,7 +749,6 @@ completeQuest("questTreasure");
 
 
 addItem("The Lily Treasure");
-
 
 
 document.getElementById("hokarangenResult")
