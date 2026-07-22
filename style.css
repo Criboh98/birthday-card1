@@ -1888,3 +1888,22 @@ CREW FIX
     position:relative;
     z-index:101;
 }
+
+
+/* FIX TREASURE SCENE LAYERING */
+
+#treasureScene {
+    position:absolute;
+    inset:0;
+    z-index:50;
+}
+
+#treasureScene .endingBox {
+    position:absolute;
+    z-index:100;
+}
+
+#treasureScene.active {
+    display:block;
+    opacity:1;
+}
