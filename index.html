@@ -27,9 +27,8 @@ QUEST PANEL
 <h2>📜 The Lily Quest</h2>
 
 <h3>
-Journey to Eternal Happiness
+Three Islands, One Treasure
 </h3>
-
 
 <ul>
 
@@ -38,27 +37,27 @@ Journey to Eternal Happiness
 </li>
 
 <li id="questIsland1">
-☐ Explore Sköndal Island
+☐ Solve Sköndal Island
 </li>
 
 <li id="questMap1">
-☐ Find Map Piece #1
+☐ Find Sköndal clue
 </li>
 
 <li id="questIsland2">
-☐ Explore Porto Badisco
+☐ Solve Porto Badisco
 </li>
 
 <li id="questMap2">
-☐ Find Map Piece #2
+☐ Find Porto Badisco clue
 </li>
 
 <li id="questIsland3">
-☐ Reach Hökarängen
+☐ Solve Hökarängen
 </li>
 
 <li id="questTreasure">
-☐ Discover Eternal Happiness
+☐ Discover The Lily Treasure
 </li>
 
 </ul>
@@ -98,7 +97,6 @@ No items yet
 
 
 
-
 <!-- =====================
 MESSAGE BOX
 ===================== -->
@@ -117,8 +115,6 @@ Close
 
 
 
-
-
 <!-- =====================
 LOADING SCREEN
 ===================== -->
@@ -127,16 +123,13 @@ LOADING SCREEN
 
 <div class="loading-content">
 
-
 <h1>
 THE LILY
 </h1>
 
-
 <p>
 An Original Pirate Adventure
 </p>
-
 
 <div class="loading-bar">
 
@@ -144,17 +137,13 @@ An Original Pirate Adventure
 
 </div>
 
-
 <span id="loadingText">
 Preparing the voyage...
 </span>
 
-
 </div>
 
 </div>
-
-
 
 
 
@@ -166,67 +155,43 @@ Preparing the voyage...
 
 
 
-
-
 <!-- =====================
 INTRO SCENE
 ===================== -->
 
-
 <section id="introScene" class="scene active">
 
+assets/backgrounds/sky.png
 
-<img class="sky"
-src="assets/backgrounds/sky.png">
-
-
-<img class="ocean"
-src="assets/backgrounds/ocean.png">
-
+assets/backgrounds/ocean.png
 
 <div class="stars"></div>
 
 <div class="fog"></div>
 
-
-
-<img id="lilyShip"
-src="assets/ship/lily.png">
-
-
-
-
+assets/ship/lily.png
 
 <div class="titleBox">
-
 
 <h1>
 THE LILY
 </h1>
 
-
 <h2>
 An Original Pirate Adventure
 </h2>
-
 
 <p>
 Created for Captain Eli
 </p>
 
-
-
 <button id="startButton">
 ⚓ Begin Adventure
 </button>
 
-
 </div>
 
-
 </section>
-
-
 
 
 
@@ -236,39 +201,25 @@ Created for Captain Eli
 HARBOR SCENE
 ===================== -->
 
-
 <section id="harborScene" class="scene">
 
-
-<img class="background"
-src="assets/backgrounds/harbor.png">
-
-
+assets/backgrounds/harbor.png
 
 <div class="harborMessage">
-
 
 <h1>
 The Harbor of The Lily
 </h1>
 
-
 <p>
-The first clue is hidden somewhere nearby...
+Before the voyage begins, Captain Eli must meet the crew.
 </p>
-
-
 
 <button id="meetCrewButton">
 Meet the Crew
 </button>
 
-
 </div>
-
-
-
-
 
 <div class="harborObject crate" id="crate">
 
@@ -280,8 +231,6 @@ Old Crate
 
 </div>
 
-
-
 <div class="harborObject wheel" id="wheel">
 
 ⚓
@@ -292,33 +241,29 @@ Ship Wheel
 
 </div>
 
-
-
 <div class="harborObject mapClue" id="mapClue">
 
 🗺️
 
 <span>
-Hidden Map Piece
+Voyage Map
 </span>
 
 </div>
 
-
-
 </section>
+
+
+
+
+
 <!-- =====================
 CREW SCENE
 ===================== -->
 
-
 <section id="crewScene" class="scene">
 
-
-<img class="background"
-src="assets/backgrounds/harbor.png">
-
-
+assets/backgrounds/harbor.png
 
 <div class="crewTitle">
 
@@ -326,30 +271,18 @@ src="assets/backgrounds/harbor.png">
 ⚓ The Crew of The Lily ⚓
 </h1>
 
-
 <p>
 Choose your companions for the voyage.
 </p>
 
-
 </div>
 
-
-
-
-
-
-
 <div class="crewPortraits">
-
-
 
 <div class="crewPortrait" id="nova">
 
 <div class="portraitFrame">
-
-<img src="assets/characters/captain-nova.png">
-
+assets/characters/captain-nova.png
 </div>
 
 <h2>
@@ -359,15 +292,10 @@ Captain Nova
 </div>
 
 
-
-
-
 <div class="crewPortrait" id="mira">
 
 <div class="portraitFrame">
-
-<img src="assets/characters/mira.png">
-
+assets/characters/mira.png
 </div>
 
 <h2>
@@ -377,15 +305,10 @@ Mira
 </div>
 
 
-
-
-
 <div class="crewPortrait" id="kaito">
 
 <div class="portraitFrame">
-
-<img src="assets/characters/kaito.png">
-
+assets/characters/kaito.png
 </div>
 
 <h2>
@@ -395,15 +318,10 @@ Kaito
 </div>
 
 
-
-
-
 <div class="crewPortrait" id="luna">
 
 <div class="portraitFrame">
-
-<img src="assets/characters/luna.png">
-
+assets/characters/luna.png
 </div>
 
 <h2>
@@ -412,51 +330,25 @@ Luna
 
 </div>
 
-
 </div>
-
-
-
-
-
-
 
 <div class="dialogueBox">
 
-
 <h2 id="characterName">
-
 Captain Nova
-
 </h2>
 
-
 <p id="dialogueText">
-
 Welcome aboard, Captain Eli.
-
 </p>
 
-
-
-
 <button id="questButton">
-
 🗺️ Continue Adventure
-
 </button>
-
-
 
 </div>
 
-
-
 </section>
-
-
-
-
 
 
 
@@ -466,16 +358,9 @@ Welcome aboard, Captain Eli.
 WORLD MAP
 ===================== -->
 
-
 <section id="mapScene" class="scene">
 
-
-<img class="background"
-src="assets/backgrounds/map.png">
-
-
-
-
+assets/backgrounds/map.png
 
 <div class="mapTitle">
 
@@ -483,48 +368,27 @@ src="assets/backgrounds/map.png">
 The Lily World Map
 </h1>
 
-
 <p>
-Choose your next destination.
+Solve the three island puzzles to reveal the treasure.
 </p>
 
 </div>
 
-
-
-
-
 <div class="islandButtons">
 
-
 <button id="skondalButton">
-
-🏝️ Sköndal
-
+🏝️ Sköndal Island
 </button>
-
-
 
 <button id="portoButton" disabled>
-
 🌊 Porto Badisco 🔒
-
 </button>
-
-
-
 
 <button id="hokarangenButton" disabled>
-
 ✨ Hökarängen 🔒
-
 </button>
 
-
-
 </div>
-
-
 
 </section>
 
@@ -532,52 +396,61 @@ Choose your next destination.
 
 
 
-
-
-
-
 <!-- =====================
-SKÖNDAL ISLAND
+SKÖNDAL ISLAND PUZZLE
 ===================== -->
-
 
 <section id="skondalScene" class="scene">
 
-
-<img class="background"
-src="assets/backgrounds/harbor.png">
-
-
+assets/backgrounds/treasure-island.png
 
 <div class="islandStory">
-
 
 <h1>
 🏝️ Sköndal Island
 </h1>
 
-
 <p>
 The Island of First Winds
 </p>
 
-
 <p>
-Search the island and find the first piece of the legendary map.
+The first island teaches Captain Eli that even small discoveries can matter.
 </p>
 
+<h2>
+Puzzle 1
+</h2>
 
+<p>
+What can make even the smallest discovery important?
+</p>
 
-<button id="findMapOne">
+<div class="puzzleButtons">
 
-🗺️ Search for Map Piece #1
-
+<button class="wrongPuzzle">
+Gold
 </button>
 
+<button id="findMapOne">
+Meaning
+</button>
+
+<button class="wrongPuzzle">
+A storm
+</button>
 
 </div>
 
+<p id="skondalResult" class="puzzleResult">
+Choose the right answer to find the first clue.
+</p>
 
+<button class="backToMapButton">
+Back to Map
+</button>
+
+</div>
 
 </section>
 
@@ -585,96 +458,123 @@ Search the island and find the first piece of the legendary map.
 
 
 
-
-
-
-
 <!-- =====================
-PORTO BADISCO
+PORTO BADISCO PUZZLE
 ===================== -->
-
 
 <section id="portoScene" class="scene">
 
-
-<img class="background"
-src="assets/backgrounds/ocean.png">
-
-
+assets/backgrounds/ocean.png
 
 <div class="islandStory">
-
 
 <h1>
 🌊 Porto Badisco
 </h1>
 
-
 <p>
-The Island of Forgotten Memories
+The Island of Patient Seas
 </p>
 
-
 <p>
-Ancient secrets wait beneath the ruins.
+The sea tests Captain Eli's patience, but a true captain keeps sailing.
 </p>
 
+<h2>
+Puzzle 2
+</h2>
 
+<p>
+What does a true captain do when the path becomes difficult?
+</p>
 
-<button id="findMapTwo">
+<div class="puzzleButtons">
 
-🗺️ Discover Map Piece #2
-
+<button class="wrongPuzzle">
+Turns back
 </button>
 
+<button id="findMapTwo">
+Does not give up
+</button>
 
+<button class="wrongPuzzle">
+Throws away the map
+</button>
 
 </div>
 
+<p id="portoResult" class="puzzleResult">
+Choose the right answer to find the second clue.
+</p>
+
+<button class="backToMapButton">
+Back to Map
+</button>
+
+</div>
 
 </section>
-<!-- =====================
-HÖKARÄNGEN FINAL ISLAND
-===================== -->
 
+
+
+
+
+<!-- =====================
+HÖKARÄNGEN FINAL PUZZLE
+===================== -->
 
 <section id="hokarangenScene" class="scene">
 
-
-<img class="background"
-src="assets/backgrounds/treasure-island.png">
-
-
+assets/backgrounds/sky.png
 
 <div class="islandStory">
-
 
 <h1>
 ✨ Hökarängen
 </h1>
 
-
 <p>
-The Eternal Isle
+The Island of Gentle Stars
 </p>
 
-
 <p>
-The final secret of The Lily awaits.
+The final island does not ask for strength. It asks for kindness.
 </p>
 
+<h2>
+Puzzle 3
+</h2>
 
+<p>
+What makes a captain unforgettable?
+</p>
+
+<div class="puzzleButtons">
 
 <button id="openTreasure">
-
-💎 Open the Treasure
-
+Kindness
 </button>
 
+<button class="wrongPuzzle">
+Fear
+</button>
 
+<button class="wrongPuzzle">
+Noise
+</button>
 
 </div>
 
+<p id="hokarangenResult" class="puzzleResult">
+Choose the right answer to reveal the treasure.
+</p>
+
+<button class="backToMapButton">
+Back to Map
+</button>
+
+</div>
 
 </section>
 
@@ -682,107 +582,73 @@ The final secret of The Lily awaits.
 
 
 
-
-
-
-
 <!-- =====================
-TREASURE ENDING
+TREASURE LETTER
 ===================== -->
-
 
 <section id="treasureScene" class="scene">
 
+assets/backgrounds/harbor.png
 
-<div class="endingBox">
-
+<div class="endingBox treasureLetterBox">
 
 <h1>
-✨ THE TREASURE OF THE LILY ✨
+Captain Eli ❤️
 </h1>
-
 
 <p>
+Dear Captain Eli,<br><br>
 
-You crossed oceans.<br>
-You discovered islands.<br>
-You followed the legend.
+The ocean is wide, and sometimes life takes us through unexpected currents.<br><br>
 
+Some journeys are straight, and some travel in circles before finding the right shore again.<br><br>
+
+But The Lily will always sail beside you.<br><br>
+
+Even from far away, this ship will guard your dreams, cheer for your victories, and remind you that you are never sailing alone.<br><br>
+
+The sea is strange, Captain Eli.<br><br>
+
+Sometimes two ships sail apart for a while...<br><br>
+
+but the same stars can guide them home again.
 </p>
 
-
-
-<h2>
-The greatest treasure was never gold...
-</h2>
-
-
-
-<h1>
-💎 Eternal Happiness 💎
-</h1>
-
-
-
 <button id="birthdayButton">
-
-🎂 Discover the Birthday Surprise
-
+💌 Open the Birthday Envelope
 </button>
-
-
 
 </div>
 
-
-
 </section>
-
-
-
 
 
 
 
 
 <!-- =====================
-BIRTHDAY LETTER
+BIRTHDAY ENVELOPE
 ===================== -->
-
 
 <section id="letterScene" class="scene">
 
+assets/backgrounds/sky.png
 
-<div class="endingBox">
-
+<div class="endingBox birthdayEnvelopeBox">
 
 <h1>
-❤️ Captain Eli ❤️
+💌 Grattis på födelsedagen! ❤️
 </h1>
-
-
 
 <p>
+Det här kortet kommer lite i förväg eftersom jag reser bort och inte ville riskera att missa din dag.<br><br>
 
-The greatest adventure was not the treasure.<br><br>
+Jag hoppas att den lilla presenten kan göra dig glad och hjälpa dig att fortsätta “bygga” din One Piece. Jag kommer alltid att heja på dig och hoppas att du hittar det du söker, Och du vet ju… du är <em>il mio cielo in una stanza</em>. 💙<br><br>
 
-It was the memories created along the journey,<br>
-the friends who sailed beside you,<br>
-and the love that makes every adventure special.
-
+Ta hand om dig, och hoppas att du får en riktigt fin födelsedag.
 </p>
 
-
-
-<h1>
-❤️ Eternal Love ❤️
-</h1>
-
-
-
 </div>
-
-
 
 </section>
 
@@ -790,16 +656,9 @@ and the love that makes every adventure special.
 
 
 
-
-
 </div>
 
-
-
-
-
 <script src="script.js"></script>
-
 
 </body>
 
