@@ -14,9 +14,7 @@
 
 </head>
 
-
 <body>
-
 
 <!-- =====================
 QUEST PANEL
@@ -64,12 +62,11 @@ Three Islands, One Treasure
 
 </div>
 
-
 <!-- =====================
 INVENTORY
 ===================== -->
 
-<button id="inventoryButton">
+<button id="inventoryButton" type="button">
 🎒 Inventory
 </button>
 
@@ -89,7 +86,6 @@ No items yet
 
 </div>
 
-
 <!-- =====================
 MESSAGE BOX
 ===================== -->
@@ -98,12 +94,11 @@ MESSAGE BOX
 
 <p id="messageText"></p>
 
-<button id="closeMessage">
+<button id="closeMessage" type="button">
 Close
 </button>
 
 </div>
-
 
 <!-- =====================
 LOADING SCREEN
@@ -135,9 +130,7 @@ Preparing the voyage...
 
 </div>
 
-
 <div id="game">
-
 
 <!-- =====================
 INTRO SCENE
@@ -145,15 +138,21 @@ INTRO SCENE
 
 <section id="introScene" class="scene active">
 
-assets/backgrounds/sky.png
+<img class="sky"
+src="assets/backgrounds/sky.png"
+alt="Sky">
 
-assets/backgrounds/ocean.png
+<img class="ocean"
+src="assets/backgrounds/ocean.png"
+alt="Ocean">
 
 <div class="stars"></div>
 
 <div class="fog"></div>
 
-assets/ship/lily.png
+<img id="lilyShip"
+src="assets/ship/lily.png"
+alt="The Lily Pirate Ship">
 
 <div class="titleBox">
 
@@ -169,7 +168,7 @@ An Original Pirate Adventure
 Created for Captain Eli
 </p>
 
-<button id="startButton">
+<button id="startButton" type="button">
 ⚓ Begin Adventure
 </button>
 
@@ -177,14 +176,15 @@ Created for Captain Eli
 
 </section>
 
-
 <!-- =====================
 HARBOR SCENE
 ===================== -->
 
 <section id="harborScene" class="scene">
 
-assets/backgrounds/harbor.png
+<img class="background"
+src="assets/backgrounds/harbor.png"
+alt="Harbor">
 
 <div class="harborMessage">
 
@@ -196,7 +196,7 @@ The Harbor of The Lily
 Before the voyage begins, Captain Eli must meet the crew.
 </p>
 
-<button id="meetCrewButton">
+<button id="meetCrewButton" type="button">
 Meet the Crew
 </button>
 
@@ -234,14 +234,15 @@ Voyage Map
 
 </section>
 
-
 <!-- =====================
 CREW SCENE
 ===================== -->
 
 <section id="crewScene" class="scene">
 
-assets/backgrounds/harbor.png
+<img class="background"
+src="assets/backgrounds/harbor.png"
+alt="Harbor">
 
 <div class="crewTitle">
 
@@ -260,7 +261,11 @@ Choose your companions for the voyage.
 <div class="crewPortrait" id="nova">
 
 <div class="portraitFrame">
-assets/characters/captain-nova.png
+
+<img
+src="assets/characters/captain-nova.png"
+alt="Captain Nova">
+
 </div>
 
 <h2>
@@ -269,11 +274,14 @@ Captain Nova
 
 </div>
 
-
 <div class="crewPortrait" id="mira">
 
 <div class="portraitFrame">
-assets/characters/mira.png
+
+<img
+src="assets/characters/mira.png"
+alt="Mira">
+
 </div>
 
 <h2>
@@ -282,11 +290,14 @@ Mira
 
 </div>
 
-
 <div class="crewPortrait" id="kaito">
 
 <div class="portraitFrame">
-assets/characters/kaito.png
+
+<img
+src="assets/characters/kaito.png"
+alt="Kaito">
+
 </div>
 
 <h2>
@@ -295,11 +306,14 @@ Kaito
 
 </div>
 
-
 <div class="crewPortrait" id="luna">
 
 <div class="portraitFrame">
-assets/characters/luna.png
+
+<img
+src="assets/characters/luna.png"
+alt="Luna">
+
 </div>
 
 <h2>
@@ -320,7 +334,7 @@ Captain Nova
 Welcome aboard, Captain Eli.
 </p>
 
-<button id="questButton">
+<button id="questButton" type="button">
 🗺️ Continue Adventure
 </button>
 
@@ -328,14 +342,16 @@ Welcome aboard, Captain Eli.
 
 </section>
 
-
-<!-- =====================
+  <!-- =====================
 WORLD MAP
 ===================== -->
 
 <section id="mapScene" class="scene">
 
-assets/backgrounds/map.png
+<img
+class="background"
+src="assets/backgrounds/map.png"
+alt="World Map">
 
 <div class="mapTitle">
 
@@ -351,15 +367,15 @@ Solve the three island puzzles to reveal the treasure.
 
 <div class="islandButtons">
 
-<button id="skondalButton">
+<button id="skondalButton" type="button">
 🏝️ Sköndal Island
 </button>
 
-<button id="portoButton" disabled>
+<button id="portoButton" type="button" disabled>
 🌊 Porto Badisco 🔒
 </button>
 
-<button id="hokarangenButton" disabled>
+<button id="hokarangenButton" type="button" disabled>
 ✨ Hökarängen 🔒
 </button>
 
@@ -368,13 +384,19 @@ Solve the three island puzzles to reveal the treasure.
 </section>
 
 
+
+
+
 <!-- =====================
 SKÖNDAL ISLAND PUZZLE
 ===================== -->
 
 <section id="skondalScene" class="scene">
 
-assets/backgrounds/treasure-island.png
+<img
+class="background"
+src="assets/backgrounds/treasure-island.png"
+alt="Sköndal Island">
 
 <div class="islandStory">
 
@@ -400,15 +422,15 @@ What can make even the smallest discovery important?
 
 <div class="puzzleButtons">
 
-<button class="wrongPuzzle">
+<button class="wrongPuzzle" type="button">
 Gold
 </button>
 
-<button id="findMapOne">
+<button id="findMapOne" type="button">
 Meaning
 </button>
 
-<button class="wrongPuzzle">
+<button class="wrongPuzzle" type="button">
 A storm
 </button>
 
@@ -418,7 +440,7 @@ A storm
 Choose the right answer to find the first clue.
 </p>
 
-<button class="backToMapButton">
+<button class="backToMapButton" type="button">
 Back to Map
 </button>
 
@@ -427,13 +449,19 @@ Back to Map
 </section>
 
 
+
+
+
 <!-- =====================
 PORTO BADISCO PUZZLE
 ===================== -->
 
 <section id="portoScene" class="scene">
 
-assets/backgrounds/ocean.png
+<img
+class="background"
+src="assets/backgrounds/ocean.png"
+alt="Porto Badisco">
 
 <div class="islandStory">
 
@@ -459,15 +487,15 @@ What does a true captain do when the path becomes difficult?
 
 <div class="puzzleButtons">
 
-<button class="wrongPuzzle">
+<button class="wrongPuzzle" type="button">
 Turns back
 </button>
 
-<button id="findMapTwo">
+<button id="findMapTwo" type="button">
 Does not give up
 </button>
 
-<button class="wrongPuzzle">
+<button class="wrongPuzzle" type="button">
 Throws away the map
 </button>
 
@@ -477,7 +505,7 @@ Throws away the map
 Choose the right answer to find the second clue.
 </p>
 
-<button class="backToMapButton">
+<button class="backToMapButton" type="button">
 Back to Map
 </button>
 
@@ -485,14 +513,16 @@ Back to Map
 
 </section>
 
-
-<!-- =====================
+  <!-- =====================
 HÖKARÄNGEN FINAL PUZZLE
 ===================== -->
 
 <section id="hokarangenScene" class="scene">
 
-assets/backgrounds/sky.png
+<img
+class="background"
+src="assets/backgrounds/sky.png"
+alt="Hökarängen">
 
 <div class="islandStory">
 
@@ -518,15 +548,15 @@ What makes a captain unforgettable?
 
 <div class="puzzleButtons">
 
-<button id="openTreasure">
+<button id="openTreasure" type="button">
 Kindness
 </button>
 
-<button class="wrongPuzzle">
+<button class="wrongPuzzle" type="button">
 Fear
 </button>
 
-<button class="wrongPuzzle">
+<button class="wrongPuzzle" type="button">
 Noise
 </button>
 
@@ -536,7 +566,7 @@ Noise
 Choose the right answer to reveal the treasure.
 </p>
 
-<button class="backToMapButton">
+<button class="backToMapButton" type="button">
 Back to Map
 </button>
 
@@ -545,13 +575,19 @@ Back to Map
 </section>
 
 
+
+
+
 <!-- =====================
 TREASURE LETTER
 ===================== -->
 
 <section id="treasureScene" class="scene">
 
-assets/backgrounds/harbor.png
+<img
+class="background"
+src="assets/backgrounds/harbor.png"
+alt="Treasure Harbor">
 
 <div class="endingBox treasureLetterBox">
 
@@ -560,6 +596,7 @@ Captain Eli ❤️
 </h1>
 
 <p>
+
 Dear Captain Eli,<br><br>
 
 The ocean is wide, and sometimes life takes us through unexpected currents.<br><br>
@@ -575,9 +612,10 @@ The sea is strange, Captain Eli.<br><br>
 Sometimes two ships sail apart for a while...<br><br>
 
 but the same stars can guide them home again.
+
 </p>
 
-<button id="birthdayButton">
+<button id="birthdayButton" type="button">
 💌 Open the Birthday Envelope
 </button>
 
@@ -586,13 +624,19 @@ but the same stars can guide them home again.
 </section>
 
 
+
+
+
 <!-- =====================
 BIRTHDAY ENVELOPE
 ===================== -->
 
 <section id="letterScene" class="scene">
 
-assets/backgrounds/sky.png
+<img
+class="background"
+src="assets/backgrounds/sky.png"
+alt="Birthday Sky">
 
 <div class="endingBox birthdayEnvelopeBox">
 
@@ -601,22 +645,22 @@ assets/backgrounds/sky.png
 </h1>
 
 <p>
+
 Det här kortet kommer lite i förväg eftersom jag reser bort och inte ville riskera att missa din dag.<br><br>
 
-Jag hoppas att den lilla presenten kan göra dig glad och hjälpa dig att fortsätta “bygga” din One Piece. Jag kommer alltid att heja på dig och hoppas att du hittar det du söker. Och du vet ju… du är <em>il mio cielo in una stanza</em>. 💙<br><br>
+Jag hoppas att den lilla presenten kan göra dig glad och hjälpa dig att fortsätta "bygga" din One Piece. Jag kommer alltid att heja på dig och hoppas att du hittar det du söker. Och du vet ju… du är <em>il mio cielo in una stanza</em>. 💙<br><br>
 
 Ta hand om dig, och hoppas att du får en riktigt fin födelsedag.
+
 </p>
 
 </div>
 
 </section>
 
-
-</div>
+  </div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
