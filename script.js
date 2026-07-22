@@ -1,3 +1,5 @@
+alert("NEW SCRIPT LOADED");
+
 document.addEventListener("DOMContentLoaded", () => {
 
 
