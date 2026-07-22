@@ -1773,3 +1773,37 @@ font-size:17px;
 
 
 }
+
+.mapTitle {
+position:absolute;
+top:10%;
+width:100%;
+text-align:center;
+z-index:20;
+}
+
+
+.mapTitle h1 {
+font-size:70px;
+color:#ffd76b;
+}
+
+
+.islandButtons {
+
+position:absolute;
+top:55%;
+width:100%;
+display:flex;
+justify-content:center;
+gap:40px;
+z-index:50;
+
+}
+
+
+.islandButtons button {
+
+cursor:pointer;
+
+}
