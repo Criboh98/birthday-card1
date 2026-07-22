@@ -1873,3 +1873,18 @@ CREW FIX
     visibility:visible;
 
 }
+
+
+/* FIX ISLAND SCENE LAYERING */
+
+.islandStory {
+    position:absolute;
+    z-index:100;
+}
+
+.backToMapButton,
+.puzzleButtons,
+.islandStory button {
+    position:relative;
+    z-index:101;
+}
