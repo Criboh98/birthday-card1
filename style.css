@@ -1907,3 +1907,21 @@ CREW FIX
     display:block;
     opacity:1;
 }
+
+/* FIX BIRTHDAY LETTER LAYERING */
+
+#letterScene {
+    position:absolute;
+    inset:0;
+    z-index:50;
+}
+
+#letterScene .birthdayEnvelopeBox {
+    position:absolute;
+    z-index:100;
+}
+
+#letterScene.active {
+    display:block;
+    opacity:1;
+}
